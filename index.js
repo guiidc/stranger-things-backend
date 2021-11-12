@@ -18,7 +18,7 @@ const strangerThingsService = new StrangerThingsService(
 app.use(cors());
 
 let { UPSIDEDOWN_MODE } = process.env;
-UPSIDEDOWN_MODE = UPSIDEDOWN_MODE === true;
+UPSIDEDOWN_MODE = UPSIDEDOWN_MODE === 'true';
 
 const hereIsTheUpsideDown = UPSIDEDOWN_MODE;
 

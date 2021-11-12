@@ -1,0 +1,16 @@
+Para fazer o deploy para o heroku vamos seguir esses passos quando estiver no requisito 6
+criar dois apps no heroku com o seguinte comando
+$ heroku create <URL DO MEU SITE> --remote <NOME DO REMOTE>
+no caso do projeto, devo me lembrar de fazer a seguinte maneira
+$ heroku create guiidc-bk --remote heroku-bk
+$ heroku create guiidc-bd --remote heroku-bk
+setar as variaveis de ambiente caso eu me esqueça
+$ heroku config:set UPSIDEDOWN_MODE=false --app guiidc-bk
+$ heroku config:set UPSIDEDOWN_MODE=true --app guiidc-bd
+e por ultimo fazer o push para o HEROKU caso ainda não tenha feito
+$ git add .
+$ git commit -m "conclui requisito 6"
+$ git push heroku-bd master
+$ git push heroku-bk master
+
+
